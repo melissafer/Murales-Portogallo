@@ -25,9 +25,17 @@
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
 }).addTo(mymap);
 
+<!--
+var stile = "top=10, left=10, width=250, height=200, status=no, menubar=no, toolbar=no scrollbars=no";
+function Popup(apri)
+{
+window.open(apri, "", stile);
+}
+//-->
+
   var marker1=L.marker([38.7208884, -9.1295], {title:"La rivoluzione dei garofani"}).bindPopup("<h1>La rivoluzione dei garofani</h1><p>Murales a tema storico</p><img src=Immagini/Larivoluzionedeigarofani1.jpg width=100% max-width=300><ul><li>Foto di: Melissa Ferretti</li><li>Data foto: Settembre 2019</li></ul>");
 
-  var marker2=L.marker([38.719185, -9.133418],  {title:"Fernando Pessoa"}).bindPopup("<h1>Fernando Pessoa</h1><p>Personaggi famosi</p><a href=Immagini/FernandoPessoa.jpg><img src=Immagini/FernandoPessoa.jpg width=100% max-width=300/></a><ul><li>Foto di: Melissa Ferretti</li><li>Data foto: Settembre 2019</li></ul>");
+  var marker2=L.marker([38.719185, -9.133418],  {title:"Fernando Pessoa"}).bindPopup("<h1>Fernando Pessoa</h1><p>Personaggi famosi</p><a href=javascript:Popup('Immagini/FernandoPessoa.jpg')><img src=Immagini/FernandoPessoa.jpg width=100% max-width=300/></a><ul><li>Foto di: Melissa Ferretti</li><li>Data foto: Settembre 2019</li></ul>");
 
   var myLayerGroup=L.layerGroup([marker1, marker2]).addTo(mymap);
 
